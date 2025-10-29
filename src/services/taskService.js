@@ -5,11 +5,10 @@ export async function getAllTasks() {
 }
 
 export async function getTaskById(id) {
-  if (typeof id !== "number") {
+  if (isNaN(id)) {
     const error = new Error("ID must be a number");
     error.status = 400;
     throw error;
-
   }
   let result = await taskRepository.findTaskById(id);
   if (result) return result;

@@ -6,6 +6,7 @@ export async function getTasks(req, res, next) {
 }
 
 export async function getTask(req, res, next) {
+  console.log(req.params.id)
   let id = parseInt(req.params.id);
   const task = await taskService.getTaskById(id);
   res.json(task);

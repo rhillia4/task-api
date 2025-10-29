@@ -2,4 +2,4 @@ type: object
 properties:
   error:
     type: string
-    example: Validation failed
+    example: Not found error
