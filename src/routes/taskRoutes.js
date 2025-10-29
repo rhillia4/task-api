@@ -5,6 +5,7 @@ import { validateTask } from '../middleware/validateTask.js';
 const router = express.Router();
 
 router.get('/', taskController.getTasks);
+router.get('/:id', taskController.getTask);
 router.post('/', validateTask, taskController.createTask);
 
 export default router;
